@@ -1,26 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import {Header, Main} from "./components";
+import {connect} from "react-redux";
+import {getDrinks} from "./actionCreaters/actionCreaters"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component{
+
+  componentDidMount(){
+    this.props.getDrinks()
+  }
+
+  render(){
+    return (
+      <div className="App">
+        <Header/>
+        <Main/>
+      </div>
+    );
+  }
 }
 
-export default App;
+const mapDispatchToProps = dispatch => {
+  return{
+    getDrinks: () => dispatch(getDrinks())
+  }
+}
+
+export default connect(null, mapDispatchToProps)(App);

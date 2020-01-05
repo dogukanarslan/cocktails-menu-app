@@ -1,0 +1,9 @@
+export const GET_OPTIONS = "GET_OPTIONS";
+export const LOADING = "LOADING";
+export const SELECTED_CHANGE = "SELECTED_CHANGE";
+export const GET_DRINK_DETAILS = "GET_DRINK_DETAILS";
+export const NEXT_PAGE = "NEXT_PAGE";
+export const PREVIOUS_PAGE = "PREVIOUS_PAGE";
+export const SORT_ITEMS = "SORT_ITEMS";
+export const GET_DRINKS = "GET_DRINKS";
+export const SEARCH_DRINK = "SEARCH_DRINK";

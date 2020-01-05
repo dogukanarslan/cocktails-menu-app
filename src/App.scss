@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+$base-opacity: .6;
+$base-border-radius: .25rem;
+
+body{
+  font-family: "Roboto", sans-serif;
+}
+
+label{
+  font-size: 1.4rem;
+}
+
+.Details{
+  .row{
+    position: relative;
+    img{
+      border-radius: $base-border-radius;
+    }
+  }
+  .closeButton{
+    position: absolute;
+    top:0;
+    left: 15px;
+    &:hover{
+      opacity: $base-opacity;
+      text-decoration: none;
+    }
+  }
+}
+
+.Drinks{
+  a{
+    text-decoration: none;
+    color: currentColor;
+  }
+  .card{
+    &:hover{
+      opacity: $base-opacity;
+    }
+  }
+}
