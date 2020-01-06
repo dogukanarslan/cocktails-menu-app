@@ -29,8 +29,8 @@ const rootReducer = (state = {
       }
       else if(action.sort === "strDrink"){
         return {...state, datas: [...state.datas.sort(function(a, b){
-          var x = a[action.sort].toLowerCase();
-          var y = b[action.sort].toLowerCase();
+          let x = a[action.sort].toLowerCase();
+          let y = b[action.sort].toLowerCase();
           if (x < y) {return -1;}
           if (x > y) {return 1;}
           return 0;
